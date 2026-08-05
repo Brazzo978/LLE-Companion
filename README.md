@@ -1,10 +1,10 @@
 # L.L.E Companion
 
-Small native Android companion for `com.codex.lle64`. L.L.E itself remains offline.
+Small native Android companion for `com.codex.lle64`. So L.L.E itself remains offline.
 
 ## Remote version file
 
-Copy `distribution/LLE_VERSION.txt` to the root of the official repository branch used by `BuildConfig.VERSION_FILE_URL`. The file contains exactly one stable four-part version, for example:
+Checks https://raw.githubusercontent.com/Brazzo978/L.L.E-Legacy-Lockscreen-Effects/refs/heads/codex/lle-unified/LLE_VERSION.txt for the current version.
 
 ```text
 1.0.5.3
@@ -18,19 +18,7 @@ Release tags must follow this exact form:
 
 ## Distribution
 
-There is one Google Play-oriented build. Companion never downloads or installs APKs and does not declare `REQUEST_INSTALL_PACKAGES`. Its install/update action opens the matching official GitHub release in the device browser. This reduces Play policy risk but does not guarantee approval.
+This is a Google Play-oriented build. Companion never downloads or installs APKs it just helps the user to do so , while doing update check.
 
-The app includes two lightweight, looping tutorials: one for downloading the stable APK from GitHub and one fullscreen installation walkthrough with playback controls.
+The app includes two lightweight, looping tutorials: one for downloading the stable APK from GitHub and one fullscreen installation walkthrough.
 
-## Local build
-
-Use JDK 17. Optional project-local Gradle and Android state can be configured like this:
-
-```powershell
-$env:JAVA_HOME = '<path-to-jdk-17>'
-$env:GRADLE_USER_HOME = "$PWD\.gradle-user"
-$env:ANDROID_USER_HOME = "$PWD\.android-user"
-.\gradlew.bat test lint assembleDebug
-```
-
-No release signing or publishing configuration is included.
