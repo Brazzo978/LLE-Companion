@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:keepScreenOn="true">
+
+    <VideoView
+        android:id="@+id/installTutorialVideo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:contentDescription="@string/install_tutorial_media_description"
+        android:focusable="true" />
+
+    <ImageButton
+        android:id="@+id/closeTutorialButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/fullscreen_close_background"
+        android:contentDescription="@string/close_tutorial"
+        android:padding="13dp"
+        android:src="@drawable/ic_close"
+        app:tint="#FFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/playerControls"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/player_controls_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="14dp">
+
+        <ImageButton
+            android:id="@+id/playbackButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/pause_tutorial"
+            android:padding="12dp"
+            android:src="@drawable/ic_pause"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/currentTimeText"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/tutorial_time_zero"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/tutorialSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@color/lle_cyan"
+            android:thumbTint="@color/lle_cyan" />
+
+        <TextView
+            android:id="@+id/durationText"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/tutorial_time_zero"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+</FrameLayout>

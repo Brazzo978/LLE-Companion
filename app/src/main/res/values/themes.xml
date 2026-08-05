@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.LLECompanion.Base" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/lle_cyan</item>
+        <item name="colorPrimaryVariant">@color/lle_cyan_dark</item>
+        <item name="colorSecondary">@color/lle_cyan</item>
+        <item name="android:colorAccent">@color/lle_cyan</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:navigationBarColor">@color/lle_navigation</item>
+        <item name="android:statusBarColor">@color/lle_header_top</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/lle_background</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="colorSurface">@color/lle_surface</item>
+        <item name="colorOnSurface">@color/lle_text</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+    </style>
+
+    <style name="Theme.LLECompanion" parent="Theme.LLECompanion.Base" />
+
+    <style name="Theme.LLECompanion.InstallTutorial" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="colorPrimary">@color/lle_cyan</item>
+        <item name="colorSecondary">@color/lle_cyan</item>
+    </style>
+
+    <style name="Widget.LLE.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">52dp</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.LLE.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@android:color/transparent</item>
+        <item name="cardCornerRadius">22dp</item>
+        <item name="cardElevation">3dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+</resources>

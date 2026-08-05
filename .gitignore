@@ -1,0 +1,14 @@
+.gradle/
+.gradle-user/
+.android-user/
+.bootstrap/
+local.properties
+**/build/
+*.iml
+.idea/
+*.apk
+*.aab
+*.part
+*.jks
+*.keystore
+keystore.properties
