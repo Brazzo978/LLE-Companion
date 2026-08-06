@@ -3,15 +3,26 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+def uploadKeystorePath = System.getenv('LLE_COMPANION_UPLOAD_KEYSTORE')
+def uploadStorePassword = System.getenv('LLE_COMPANION_UPLOAD_STORE_PASSWORD')
+def uploadKeyAlias = System.getenv('LLE_COMPANION_UPLOAD_KEY_ALIAS')
+def uploadKeyPassword = System.getenv('LLE_COMPANION_UPLOAD_KEY_PASSWORD')
+def hasPlayUploadSigning = [
+    uploadKeystorePath,
+    uploadStorePassword,
+    uploadKeyAlias,
+    uploadKeyPassword
+].every { it != null && !it.trim().isEmpty() }
+
 android {
     namespace 'com.codex.lle.companion'
-    compileSdk 35
-    buildToolsVersion '35.0.1'
+    compileSdk 36
+    buildToolsVersion '36.0.0'
 
     defaultConfig {
         applicationId 'com.codex.lle.companion'
         minSdk 23
-        targetSdk 35
+        targetSdk 36
         versionCode 1
         versionName '1.0.0'
 
@@ -25,6 +36,15 @@ android {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasPlayUploadSigning) {
+                signingConfig signingConfigs.create('playUpload') {
+                    storeFile file(uploadKeystorePath)
+                    storePassword uploadStorePassword
+                    keyAlias uploadKeyAlias
+                    keyPassword uploadKeyPassword
+                    storeType 'PKCS12'
+                }
+            }
         }
     }
 
@@ -42,6 +62,16 @@ android {
 
     packaging {
         resources.excludes += ['META-INF/AL2.0', 'META-INF/LGPL2.1']
+    }
+}
+
+tasks.matching { it.name == 'bundleRelease' || it.name == 'assembleRelease' }.configureEach {
+    doFirst {
+        if (!hasPlayUploadSigning) {
+            throw new GradleException(
+                'Play upload signing is missing. Use scripts/build-play-bundle.ps1.'
+            )
+        }
     }
 }
 

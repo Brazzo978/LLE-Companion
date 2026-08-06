@@ -11,4 +11,5 @@ local.properties
 *.part
 *.jks
 *.keystore
+*.p12
 keystore.properties
