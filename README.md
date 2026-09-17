@@ -46,10 +46,10 @@ installation confirmation under user control.
 
 The current stable version is read over HTTPS from:
 
-[`LLE_VERSION.txt`](https://raw.githubusercontent.com/Brazzo978/L.L.E-Legacy-Lockscreen-Effects/refs/heads/codex/lle-unified/LLE_VERSION.txt)
+[`LLE_VERSION.txt`](https://raw.githubusercontent.com/Brazzo978/L.L.E-Legacy-Lockscreen-Effects/refs/heads/main/LLE_VERSION.txt)
 
 ```text
-1.0.5.3
+1.0.6.5
 ```
 
 Companion checks the file when the app opens. When notifications are enabled,

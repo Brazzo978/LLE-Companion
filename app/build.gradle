@@ -28,7 +28,7 @@ android {
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
         vectorDrawables.useSupportLibrary = true
-        buildConfigField 'String', 'VERSION_FILE_URL', '"https://raw.githubusercontent.com/Brazzo978/L.L.E-Legacy-Lockscreen-Effects/codex/lle-unified/LLE_VERSION.txt"'
+        buildConfigField 'String', 'VERSION_FILE_URL', '"https://raw.githubusercontent.com/Brazzo978/L.L.E-Legacy-Lockscreen-Effects/main/LLE_VERSION.txt"'
     }
 
     buildTypes {
