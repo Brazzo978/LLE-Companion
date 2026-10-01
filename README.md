@@ -8,9 +8,9 @@ download and installation tutorials.
 
 ## Google Play closed test
 
-The first `1.0.0` release has been published to the Google Play closed-test
-track. We need at least 12 genuine Android testers who can install and use the
-app, report problems, and remain opted in for at least 14 consecutive days.
+L.L.E Companion is distributed through the Google Play closed-test track.
+We need genuine Android testers who install and use the app, report problems,
+and remain opted in for the required testing period.
 
 Join in this order, using the same Google account for every step and for the
 Play Store on the Android device:
@@ -49,7 +49,7 @@ The current stable version is read over HTTPS from:
 [`LLE_VERSION.txt`](https://raw.githubusercontent.com/Brazzo978/L.L.E-Legacy-Lockscreen-Effects/refs/heads/main/LLE_VERSION.txt)
 
 ```text
-1.0.6.5
+1.0.6.7
 ```
 
 Companion checks the file when the app opens. When notifications are enabled,
@@ -65,7 +65,7 @@ it to protect battery life. APK downloads never start in the background.
 Public L.L.E release tags must match the version file exactly:
 
 ```text
-v1.0.5.3
+v1.0.6.7
 ```
 
 ## Privacy
@@ -84,7 +84,7 @@ confirmation. See the [privacy policy](PRIVACY_POLICY.md) and the shorter
 | Property | Value |
 |---|---|
 | Application ID | `com.codex.lle.companion` |
-| Version | `1.0.0` (`versionCode 1`) |
+| Version | `1.0.1` (`versionCode 2`) |
 | Minimum Android version | Android 6.0 / API 23 |
 | Target SDK | 36 |
 | L.L.E package queried | `com.codex.lle64` |

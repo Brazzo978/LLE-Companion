@@ -3,7 +3,7 @@
     <string name="app_name">L.L.E Companion</string>
     <string name="brand_title">L.L.E</string>
     <string name="companion_label">Companion</string>
-    <string name="app_subtitle">Legacy Lockscreen effect</string>
+    <string name="app_subtitle">Legacy Lockscreen Effects</string>
     <string name="update_status_section">Update status</string>
     <string name="notification_section">Notifications</string>
     <string name="footer_text">L.L.E Companion</string>
@@ -43,8 +43,8 @@
     <string name="github_tutorial_placeholder_caption">GitHub download tutorial</string>
     <string name="open_github">OK, continue</string>
     <string name="not_now">Not now</string>
-    <string name="download_return_title">Download complete!</string>
-    <string name="download_return_body">Would you like to see how to install L.L.E?</string>
+    <string name="download_return_title">Ready to install?</string>
+    <string name="download_return_body">If you downloaded the APK, you can follow the installation tutorial.</string>
     <string name="show_install_tutorial">Show installation tutorial</string>
     <string name="not_yet">No, thanks</string>
     <string name="install_tutorial_title">How to install L.L.E</string>

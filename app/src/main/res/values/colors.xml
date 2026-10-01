@@ -3,13 +3,13 @@
     <color name="lle_background">#EEF6FB</color>
     <color name="lle_surface">#FFFFFF</color>
     <color name="lle_surface_raised">#F8FBFC</color>
-    <color name="lle_cyan">#00848E</color>
+    <color name="lle_cyan">#006F78</color>
     <color name="lle_cyan_dark">#4098A0</color>
-    <color name="lle_green">#16A062</color>
-    <color name="lle_amber">#DE7737</color>
+    <color name="lle_green">#087A43</color>
+    <color name="lle_amber">#A64B12</color>
     <color name="lle_red">#CF4348</color>
     <color name="lle_text">#212121</color>
-    <color name="lle_text_secondary">#757575</color>
+    <color name="lle_text_secondary">#626B73</color>
     <color name="lle_outline">#AAC0CC</color>
     <color name="lle_grace_navy">#27376F</color>
     <color name="lle_grace_blue">#3D6FA9</color>
